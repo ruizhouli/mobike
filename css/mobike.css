@@ -1,0 +1,344 @@
+body{
+    /* background: grey; */
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
+}
+/* 版心公用 */
+.container-md{
+    width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
+    /* background-color: skyblue; */
+}
+/* header */
+.header{
+    height:80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:100;
+   
+   
+}
+.logo{
+    width: 100px;
+    height: 37px;
+    padding-top: 22px;
+    float: left;
+}
+.nav{
+    float: right;
+}
+.nav li{
+    float: left;
+    line-height: 80px;
+    font-size: 16px;
+    position: relative;
+}
+.nav li a{
+    color: white;
+    padding: 0 20px;
+}
+.nav .layer{
+    width:240px;
+    height: 204px;
+    padding-top:15px;
+    border-radius: 3px; 
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    background: white;
+    position: absolute;
+    top:80px;
+    left: 0;
+    display: none;
+}
+.layer::before{
+  display: block;
+  content:"";
+  height: 0;
+  width: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color:transparent transparent #fff transparent;
+  position: absolute;
+  top:-16px;
+  left: 25px;
+}
+.nav li:hover .layer{
+    display: block;
+}
+/* heading-txt */
+/* 行高如果带单位 设多少就是多少 如果不带单位 代表字体大小的多少倍 */
+.heading-txt{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top:-72px;
+    z-index: 100;
+}
+
+.font-logo{
+    font-size: 67.2px;
+    /* font-weight: bold; */
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.use-btn{
+    display: inline-block;
+    padding:16px 26px;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .1em;
+    border-radius: 6px;
+    
+}
+.swiper-slide img{
+    width: 100%;
+}
+.header-wrap{
+    position: relative;
+}
+.news-ad{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0px;
+    background:rgba(122, 112, 101, 0.4);
+    font-size: 0;
+}
+.news-ad span{
+  display: inline-block;
+    font-size:12px;
+    color: #fff;
+    line-height: 18px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+    padding:0 8px;
+}
+.news-ad .headline-text{
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+}
+/*广告图片 */
+.hero{
+    width: 25%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    padding-top:37px;
+    box-sizing: border-box;
+    border-left: 2px #fff solid;
+}
+.heros{
+    margin-top: 2px;
+    margin-left: -2px;
+}
+.meta-links{
+    width: 33.33%;
+    float: left;
+    padding: 40px 0;
+}
+.meta-links .icon{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.meta-links .txt{
+    display: inline-block; 
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    text-align: left;
+}
+.meta-links .txt h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+.meta-links:nth-child(2){
+    text-align: center;
+}
+.meta-links:nth-child(3){
+    text-align: right;
+}
+.footer-wrap{
+    border-top:1px #EEEEEE solid;
+    border-bottom: 1px #EEEEEE solid;
+}
+.footer-wrap .footer .main-links .font-logo{
+    display: block;
+    width: 160px;
+    height:36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.footer-wrap a{
+    margin-bottom: 10px;
+    color: #000;
+}
+ .footer{
+     padding:45px 0;
+ }
+ .footer-wrap .main-links li{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.3;
+}
+.footer-wrap .main-links{
+    width: 440px;
+    height: 155px;
+    float: left;
+}
+.footer-list-wrap{
+    float: left;
+}
+.font-list{
+    margin-left:110px;
+    font-size: 15px;
+    font-weight: 300;
+    float: left;
+}
+.font-list h3{
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.font-list li{
+    line-height: 2;
+}
+.font-list:nth-child(4){
+    list-style-type: none;
+}
+.font-list:nth-child(1){
+    margin-left: 0;
+}
+.footer-miscs{
+    padding-bottom:45px;
+}
+.footer-miscs .main-links{
+    font-size: 16px;
+    font-weight: 300px;
+    color: #000;
+    margin-right: 40px;
+    float: left;
+}
+.footer-miscs .beian-icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: -3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.footer-miscs .main-links li{
+    font-size: 12px;
+    color: #aaaaaa;
+    margin:4px 0 0 0;
+    line-height: 2.3;
+}
+.footer-miscs .footer-badges img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAD适配 */
+@media screen and (max-width:1080px){
+.container-md{
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav{display: none}
+.hero{
+    width:50%;
+    margin-bottom:2px;
+}
+.footer-wrap .footer .footer-list-wrap{
+    width: 417.11px;
+}
+.footer-wrap .footer .main-links{
+    width: 270.89px;
+}
+.footer-wrap .footer .font-list{
+    margin-left: 60px;
+}
+.footer-wrap .footer .font-list:nth-child(1){
+    margin-left: 0;
+}
+
+
+}
+/* 手机端适配 */
+@media screen and (max-width:640px){
+.font-logo{
+    font-size: 44.8px;
+  }
+  .swiper-slide img{height:546px;}
+  .headline-text{
+      width:80%;
+      margin-left: 8px;
+  }
+  .news-ad span{
+      vertical-align: 14px;
+      
+  }
+  .hero{
+      width: 100%;
+  }
+  .meta-links{
+      width: 100%;
+      padding:20px 0;
+  }
+  .meta-links:nth-child(2){
+      text-align: left;
+  }
+  .meta-links:nth-child(3){
+      text-align: left;
+  }
+ .footer-wrap .footer-list-wrap{
+      height:335px;
+      height:360px;
+  }
+  .footer-wrap .footer-list-wrap .font-list{
+      margin-left:0;
+      width:167.5px;
+      height:125px;
+      margin-bottom: 40px;
+  }
+  .footer-miscs .footer .footer-badges{
+     float: left;
+  }
+  .footer-miscs .footer .main-links{
+      float: none;
+      margin-bottom: 40px;
+  }
+}
