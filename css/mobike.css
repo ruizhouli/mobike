@@ -1,5 +1,7 @@
-body{
+html,body{
     /* background: grey; */
+    width: 100%;
+    height: 100%;
     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
 }
 /* 版心公用 */
@@ -94,8 +96,17 @@ body{
     border-radius: 6px;
     
 }
-.swiper-slide img{
+.swiper-wrapper{
+    width:100%;
+    height: 762px;
+}
+.swiper-slide a{
+    display: block;
     width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-wrap{
     position: relative;
@@ -123,7 +134,7 @@ body{
 .news-ad .headline-text{
     display: inline-block;
     font-size: 16px;
-    color: #fff;
+    color: #000;
 }
 /*广告图片 */
 .hero{
@@ -302,7 +313,10 @@ body{
 .font-logo{
     font-size: 44.8px;
   }
-  .swiper-slide img{height:546px;}
+  .swiper-wrapper{
+    width:100%;
+    height: 505.79px;
+}
   .headline-text{
       width:80%;
       margin-left: 8px;
