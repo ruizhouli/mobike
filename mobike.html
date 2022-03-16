@@ -127,7 +127,7 @@
         <div class="news-ad">
             <div class="container-md">
                 <span>NEWS</span>
-                <div class="headline-text">
+                <div class="headline-text" onclick = "fanhui()">
                     “摩拜公交” 小程序上线 线上购买地铁票省时省力
                 </div>
             </div>
@@ -283,6 +283,9 @@
                 disableOnInteraction: false,
             }
         })        
+        function fanhui (){
+            window.history.back(-1)
+        }
     </script>
 </body>
 
