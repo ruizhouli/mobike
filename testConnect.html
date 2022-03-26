@@ -5,11 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        .outZC {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .intCont {
+            width: 40vh;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            
+        }
+        .btn {
+            width: 20%; 
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            border: 1px solid #7E38D2;
+        }
+    </style>
 </head>
 <body>
+    <div class="outZC">
+        <div class="intCont">
+            <div class="btn" onclick = "exit()">
+                不同意
+            </div>
+            <div class="btn">
+                同意
+            </div>
+        </div>
+     </div>
     <button onclick="toUrl()">跳转Mobike</button>
     <button onclick="fanhui()">返回</button>
-     
     <script>
        function toUrl () {
            window.location.href = "https://ruizhouli.github.io/mobike/mobike.html"
@@ -17,6 +53,18 @@
 
        function fanhui(){
            window.history.back(-1)
+       }
+       function exit () {
+            var userAgent = navigator.userAgent;
+            if (userAgent.indexOf("Firefox") != -1 || userAgent.indexOf("Chrome") !=-1) {
+                    window.location.href="about:blank";
+            }else if(userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1){
+                 window.opener=null;window.open('about:blank','_self').close();
+            }else {
+                window.opener = null;
+                window.open('about:blank', '_self');
+                window.close();
+            }
        }
     </script>
 </body>
