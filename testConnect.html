@@ -56,9 +56,8 @@
        }
        function exit () {
             var userAgent = navigator.userAgent;
-            window.opener = null;
-            window.open('about:blank', '_self');
-            window.close();
+            window.opener=null;
+            window.open('about:blank','_self').close();
             return
             if (userAgent.indexOf("Firefox") != -1 || userAgent.indexOf("Chrome") !=-1) {
                 window.location.href="about:blank";
